@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DukAOr6mz0o=",
+  "dgSpecHash": "qzs5XXzHYs8=",
   "success": true,
-  "projectFilePath": "C:\\Chess-Challenge-main\\Chess-Challenge\\Chess-Challenge.csproj",
+  "projectFilePath": "C:\\Chess-Challenge-main\\ChessBotFrameworkSTEM2025\\Chess-Challenge\\Chess-Challenge.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\talha\\.nuget\\packages\\raylib-cs\\4.5.0.2\\raylib-cs.4.5.0.2.nupkg.sha512",
     "C:\\Users\\talha\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

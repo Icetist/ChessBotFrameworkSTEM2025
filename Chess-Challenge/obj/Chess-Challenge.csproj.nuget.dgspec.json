@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Chess-Challenge-main\\Chess-Challenge\\Chess-Challenge.csproj": {}
+    "C:\\Chess-Challenge-main\\ChessBotFrameworkSTEM2025\\Chess-Challenge\\Chess-Challenge.csproj": {}
   },
   "projects": {
-    "C:\\Chess-Challenge-main\\Chess-Challenge\\Chess-Challenge.csproj": {
+    "C:\\Chess-Challenge-main\\ChessBotFrameworkSTEM2025\\Chess-Challenge\\Chess-Challenge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Chess-Challenge-main\\Chess-Challenge\\Chess-Challenge.csproj",
+        "projectUniqueName": "C:\\Chess-Challenge-main\\ChessBotFrameworkSTEM2025\\Chess-Challenge\\Chess-Challenge.csproj",
         "projectName": "Chess-Challenge",
-        "projectPath": "C:\\Chess-Challenge-main\\Chess-Challenge\\Chess-Challenge.csproj",
+        "projectPath": "C:\\Chess-Challenge-main\\ChessBotFrameworkSTEM2025\\Chess-Challenge\\Chess-Challenge.csproj",
         "packagesPath": "C:\\Users\\talha\\.nuget\\packages\\",
-        "outputPath": "C:\\Chess-Challenge-main\\Chess-Challenge\\obj\\",
+        "outputPath": "C:\\Chess-Challenge-main\\ChessBotFrameworkSTEM2025\\Chess-Challenge\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\talha\\AppData\\Roaming\\NuGet\\NuGet.Config"
