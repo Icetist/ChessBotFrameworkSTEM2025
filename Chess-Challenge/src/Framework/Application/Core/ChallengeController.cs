@@ -1,4 +1,4 @@
-﻿using ChessChallenge.Chess;
+using ChessChallenge.Chess;
 using ChessChallenge.Example;
 using Raylib_cs;
 using System;
@@ -68,8 +68,9 @@ namespace ChessChallenge.Application
             board = new Board();
             pgns = new();
 
-            BotStatsA = new BotMatchStats("IBot");
-            BotStatsB = new BotMatchStats("IBot");
+            BotStatsA = new BotMatchStats(Settings.Bot1Name);
+            BotStatsB = new BotMatchStats(Settings.Bot2Name);
+
             botMatchStartFens = FileHelper.ReadResourceFile("Fens.txt").Split('\n').Where(fen => fen.Length > 0).ToArray();
             botTaskWaitHandle = new AutoResetEvent(false);
 
@@ -395,14 +396,28 @@ namespace ChessChallenge.Application
         }
 
         static string GetPlayerName(ChessPlayer player) => GetPlayerName(player.PlayerType);
-        static string GetPlayerName(PlayerType type) => type.ToString();
+        static string GetPlayerName(PlayerType type)
+            {
+                return type switch
+                {
+                    PlayerType.MyBot => Settings.Bot1Name,
+                    PlayerType.EvilBot => Settings.Bot2Name,
+                    PlayerType.Human => "Human",
+                    _ => "Unknown"
+                };
+            }
+
 
         public void StartNewBotMatch(PlayerType botTypeA, PlayerType botTypeB)
         {
             EndGame(GameResult.DrawByArbiter, log: false, autoStartNextBotMatch: false);
             botMatchGameIndex = 0;
-            string nameA = GetPlayerName(botTypeA);
-            string nameB = GetPlayerName(botTypeB);
+            string nameA = typeToSettingsName(botTypeA);
+            string nameB = typeToSettingsName(botTypeB);
+
+            BotStatsA = new BotMatchStats(nameA);
+            BotStatsB = new BotMatchStats(nameB);
+
             if (nameA == nameB)
             {
                 nameA += " (A)";
@@ -414,6 +429,14 @@ namespace ChessChallenge.Application
             Log($"Starting new match: {nameA} vs {nameB}", false, ConsoleColor.Blue);
             StartNewGame(botTypeA, botTypeB);
         }
+        private string typeToSettingsName(PlayerType type) => type switch
+        {
+            PlayerType.MyBot => Settings.Bot1Name,
+            PlayerType.EvilBot => Settings.Bot2Name,
+            PlayerType.Human => "Human",
+            _ => "Unknown"
+        };
+
 
 
         ChessPlayer PlayerToMove => board.IsWhiteToMove ? PlayerWhite : PlayerBlack;
