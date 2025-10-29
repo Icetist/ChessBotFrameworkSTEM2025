@@ -5,6 +5,8 @@ namespace ChessChallenge.Application
     public static class Settings
     {
         public const string Version = "STEMCON 2025";
+        public const string Bot1Name = "Team1";
+        public const string Bot2Name = "Team2";
 
         // Game settings
         public const int GameDurationMilliseconds = 300 * 1000;
