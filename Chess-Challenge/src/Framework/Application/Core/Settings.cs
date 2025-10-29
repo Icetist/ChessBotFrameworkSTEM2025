@@ -9,9 +9,9 @@ namespace ChessChallenge.Application
         public const string Bot2Name = "Team2";
 
         // Game settings
-        public const int GameDurationMilliseconds = 300 * 1000;
+        public const int GameDurationMilliseconds = 60 * 1000;
         public const int IncrementMilliseconds = 0 * 1000;
-        public const float MinMoveDelay = 1;
+        public const float MinMoveDelay = 0;
         public static readonly bool RunBotsOnSeparateThread = true;
 
         // Display settings

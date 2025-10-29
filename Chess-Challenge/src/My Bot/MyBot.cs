@@ -1,14 +1,10 @@
-namespace auto_Bot_514;
-// Project: smol.cs
-// License: MIT
-// Authors: Gediminas Masaitis, Goh CJ (cj5716)
 
 using ChessChallenge.API;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public class Bot_514 : IChessBot
+public class MyBot : IChessBot
 {
     // Keeping track of which quiet move move is most likely to cause a beta cutoff.
     // The higher the score is, the more likely a beta cutoff is, so in move ordering we will put these moves first.
